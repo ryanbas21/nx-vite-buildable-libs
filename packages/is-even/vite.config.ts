@@ -3,14 +3,14 @@ import { defineConfig } from 'vite';
 
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 import dts from 'vite-plugin-dts';
-import { join } from 'path';
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/is-even',
 
   plugins: [
     dts({
-      tsConfigFilePath: join(__dirname, 'tsconfig.lib.json'),
+      root: '../../',
+      tsConfigFilePath: 'packages/is-even/tsconfig.lib.json',
       // Faster builds by skipping tests. Set this to false to enable type checking.
       skipDiagnostics: false,
     }),
