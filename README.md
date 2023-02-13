@@ -10,7 +10,11 @@ Run `npm install` to install all the dependencies.
 
 ## Reproduction
 
-Running `npm run build` prints Typescript errors because path for `is-even` buildable library is not replaced with the build `dist` path. So Typescript is trying to check source files outside of the root source folder which results in bunch of `TS6059` errors.
+Running `npm run build` (aka `nx run is-odd:build --skip-nx-cache`) prints Typescript errors because path for `is-even` buildable library is not replaced with the build `dist` path. So Typescript is trying to check source files outside of the root source folder which results in bunch of `TS6059` errors.
+
+```
+packages/is-even/src/index.ts:1:15 - error TS6059: File 'packages/is-even/src/lib/is-even.ts' is not under 'rootDir' 'packages/is-odd'. 'rootDir' is expected to contain all source files.
+```
 
 ## Further help
 
