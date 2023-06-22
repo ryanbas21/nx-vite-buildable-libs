@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pulecka/is-even": ["packages/is-even/src/index.ts"],
-      "@pulecka/is-odd": ["packages/is-odd/src/index.ts"]
+      "@shared/is-even": ["packages/is-even/src/index.ts"],
+      "@shared/is-odd": ["packages/is-odd/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

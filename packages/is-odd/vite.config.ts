@@ -10,9 +10,13 @@ export default defineConfig({
 
   plugins: [
     dts({
-      tsConfigFilePath: join(__dirname, 'tsconfig.lib.json'),
-      // Faster builds by skipping tests. Set this to false to enable type checking.
+      root: '../../',
+      entryRoot: 'packages/is-odd/src',
+      tsConfigFilePath: 'packages/is-odd/tsconfig.lib.json',
+      include: ['packages/is-odd/src/**/*.ts'],
+      outputDir: 'dist/packages/is-odd',
       skipDiagnostics: false,
+      noEmitOnError: true,
     }),
 
     viteTsConfigPaths({

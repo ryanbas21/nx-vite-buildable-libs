@@ -1,11 +1,12 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "nx-vite-buildable-libs",
+  "npmScope": "shared",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "OTkxNzgxZjMtODg5Ny00MjJkLWE0NDktNjA0ZWVlZWVmMGMwfHJlYWQtd3JpdGU="
       }
     }
   },
